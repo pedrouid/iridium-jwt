@@ -1,0 +1,29 @@
+{
+  "name": "iridium-jwt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build:cjs": "npx tsc -p tsconfig.cjs.json",
+    "build:esm": "npx tsc -p tsconfig.esm.json",
+    "build": "npm run build:cjs && npm run build:esm",
+    "start": "node dist/esm",
+    "check": "npm run build && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@stablelib/ed25519": "^1.0.2",
+    "@walletconnect/safe-json": "^1.0.0",
+    "did-jwt": "^6.1.2",
+    "did-resolver": "^3.2.2",
+    "key-did-resolver": "^2.0.4",
+    "uint8arrays": "^3.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.8.1",
+    "tslib": "^2.4.0"
+  }
+}
